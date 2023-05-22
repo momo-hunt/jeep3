@@ -10,15 +10,13 @@
 {/if}
 
 <style>
-  /* * {
-    border: 1px solid red;
-  } */
+  * {
+    /* border: 1px solid red; */
+  }
 
   section {
-    margin: 1rem;
     padding: 0.5rem 1rem;
-    background: var(--bg-1);
-    min-height: 2rem;
+    max-height: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,8 +24,9 @@
 
   section span {
     position: absolute;
+    color: white;
     animation: blink 3s linear infinite;
-    filter: contrast(0.5);
+    filter: contrast(0.8);
   }
 
   @keyframes blink {
@@ -61,7 +60,7 @@
     height: 100%;
     border-radius: 50%;
     border: 3px solid red;
-    border-color: blue transparent blue transparent;
+    border-color: white transparent white transparent;
     animation: spin 1s linear infinite;
   }
 
@@ -72,7 +71,7 @@
     height: 100%;
     border-radius: 50%;
     border: 3px solid red;
-    border-color: rgba(0, 0, 255, 0.5) transparent rgba(0, 0, 255, 0.5)
+    border-color: rgba(145, 145, 189, 0.5) transparent rgba(145, 145, 189, 0.5)
       transparent;
     animation: spin 4s linear infinite;
   }

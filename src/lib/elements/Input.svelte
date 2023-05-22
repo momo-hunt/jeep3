@@ -38,6 +38,7 @@
     width: 100%;
     height: 2rem;
     padding: 0 1rem;
+    margin-bottom: 1rem;
   }
 
   input::placeholder {
@@ -45,8 +46,13 @@
     opacity: 0.6;
   }
 
-  article {
-    margin: 1rem 0;
+  input:focus::placeholder {
+    opacity: 0;
+  }
+
+  input:focus {
+    outline: 1px solid var(--blue);
+    outline-offset: 2px;
   }
 
   label {

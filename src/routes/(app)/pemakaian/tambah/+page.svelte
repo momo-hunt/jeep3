@@ -1,9 +1,10 @@
 <script>
+  import TitleHeader from "$lib/components/TitleHeader.svelte";
   import FormTambah from "./FormTambah.svelte";
 
   export let data;
 </script>
 
-<h2>Tambah Pemakaian</h2>
+<TitleHeader title="Tambah Pemakaian" />
 
 <FormTambah {data} />

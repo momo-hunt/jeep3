@@ -3,6 +3,7 @@
   import { list } from "$lib/stores";
   import List from "./List.svelte";
   import LoadingData from "$lib/components/LoadingData.svelte";
+  import TitleHeader from "../../../lib/components/TitleHeader.svelte";
 
   let name = "pemakaian";
 
@@ -13,7 +14,7 @@
   // $: console.log($list);
 </script>
 
-<h2>Pemakaian</h2>
+<TitleHeader title="Pemakaian" />
 
 <List {name} />
 

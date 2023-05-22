@@ -4,6 +4,7 @@
   import { obj } from "$lib/stores";
   import LoadingData from "$lib/components/LoadingData.svelte";
   import Detail from "./Detail.svelte";
+  import TitleHeader from "../../../../lib/components/TitleHeader.svelte";
 
   const { id } = $page.params;
 
@@ -14,7 +15,7 @@
   $: console.log($obj);
 </script>
 
-<h2>Detail Pemakaian</h2>
+<TitleHeader title="Detail Pemakaian" />
 
 <LoadingData loading={$obj?.loading}>Memuat data...</LoadingData>
 

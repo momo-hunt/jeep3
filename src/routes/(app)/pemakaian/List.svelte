@@ -1,4 +1,5 @@
 <script>
+  import { dayAgo } from "$lib/helper/datetime";
   import { list } from "$lib/stores";
   import Button from "$lib/elements/Button.svelte";
   export let name;
@@ -12,11 +13,10 @@
           <div>Des</div>
           <h2>19</h2>
         </article>
-        <hr />
         <article class="right">
-          <small>Santoso : {d.created_at}</small>
           <a href={`/pemakaian/${d.id}`}><h3>{d.keperluan} ({d.tujuan})</h3></a>
           <p>Km Akhir : {d.km_akhir}</p>
+          <small>{d.created_by?.name ?? "-"} : {dayAgo(d.created_at)}</small>
         </article>
       </li>
     {/each}
@@ -38,12 +38,9 @@
     gap: 1rem;
   }
 
-  ul li hr {
-    border-color: var(--bg-2);
-  }
-
   ul li > *:first-child {
     text-align: right;
+    filter: brightness(0.9);
   }
 
   ul li h3 {

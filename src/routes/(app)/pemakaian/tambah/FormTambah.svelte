@@ -10,7 +10,7 @@
   let formData = { km_awal: 0 };
   let success;
   let error;
-  let loading;
+  let loading = false;
 
   $: if (success) goto(`/pemakaian/${success.id}`);
 </script>
@@ -53,7 +53,7 @@
       value={formData["km_akhir"] - formData["km_awal"] || 0}
     />
 
-    <ButtonForm>Simpan</ButtonForm>
+    <ButtonForm {loading}>Simpan</ButtonForm>
   </Form>
 </section>
 
