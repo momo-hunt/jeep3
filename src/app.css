@@ -1,0 +1,35 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+:root {
+  --bg: black;
+  --bg-1: #1d2830;
+  --bg-2: #2a3e4c;
+  --color: #f5f5f5;
+  --blue: #0074cc;
+}
+
+body {
+  background: var(--bg);
+  color: var(--color);
+  font-family: sans-serif;
+}
