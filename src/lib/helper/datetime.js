@@ -73,3 +73,23 @@ export const dayAgo = (d) => {
     return "beberapa saat lalu";
   }
 };
+
+export const dateHalf = (f, b) => {
+  b = new Date(b);
+
+  let opt = {};
+  if (f == "bulan") {
+    opt = { month: "short" };
+  } else if (f == "tanggal") {
+    opt = { day: "2-digit" };
+  } else if (f == "tahun") {
+    opt = { year: "numeric" };
+  } else {
+    opt = null;
+  }
+
+  let v = new Intl.DateTimeFormat("id-ID", opt).format(b);
+  // console.log(v);
+  // return "Jan";
+  return v;
+};

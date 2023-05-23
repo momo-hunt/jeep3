@@ -1,6 +1,9 @@
 <script>
   import { dayAgo } from "$lib/helper/datetime";
   import { list } from "$lib/stores";
+  import { rupiah } from "$lib/helper/stringnumber";
+  import { dateHalf } from "$lib/helper/datetime";
+
   import Button from "$lib/elements/Button.svelte";
   export let name;
 </script>
@@ -10,12 +13,14 @@
     {#each $list?.[name]?.data as d}
       <li>
         <article class="left">
-          <div>Des</div>
-          <h2>19</h2>
+          <div>{dateHalf("bulan", d.tanggal_kembali)}</div>
+          <h2>
+            {dateHalf("tanggal", d.tanggal_kembali)}
+          </h2>
         </article>
         <article class="right">
           <a href={`/pemakaian/${d.id}`}><h3>{d.keperluan} ({d.tujuan})</h3></a>
-          <p>Km Akhir : {d.km_akhir}</p>
+          <p>Km Akhir : {rupiah(d.km_akhir)}</p>
           <small>{d.created_by?.name ?? "-"} : {dayAgo(d.created_at)}</small>
         </article>
       </li>

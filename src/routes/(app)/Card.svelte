@@ -12,13 +12,14 @@
   article {
     flex: 1;
     margin: 0.5rem 0;
-    padding: 1rem;
+    padding: 0.5rem;
     background: var(--bg-2);
-    border: 1px solid rgba(112, 128, 144, 0.5);
+    border: 1px solid rgba(112, 128, 144, 0.2);
   }
 
   article h2 {
     color: var(--blue);
+    text-align: right;
   }
 
   article > div {

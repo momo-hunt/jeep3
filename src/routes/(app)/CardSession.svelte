@@ -14,8 +14,8 @@
     <Card name="KM" value={data["km_jumlah_bulan"]} />
     <Card name="BBM" value={numberKoma(data["bbm_liter_bulan"])} />
     <Card
-      name="Liter / KM"
-      value={numberKoma(data["bbm_liter_bulan"] / data["km_jumlah_bulan"])}
+      name="KM / Liter"
+      value={numberKoma(data["km_jumlah_bulan"] / data["bbm_liter_bulan"])}
     />
   </div>
   <div class="row">
@@ -31,8 +31,8 @@
     <Card name="KM" value={data["km_jumlah_tahun"]} />
     <Card name="BBM" value={numberKoma(data["bbm_liter_tahun"])} />
     <Card
-      name="Liter / KM"
-      value={numberKoma(data["bbm_liter_tahun"] / data["km_jumlah_tahun"])}
+      name="KM / Liter"
+      value={numberKoma(data["km_jumlah_tahun"] / data["bbm_liter_tahun"])}
     />
   </div>
   <div class="row">

@@ -10,6 +10,6 @@
   header a {
     display: inline-block;
     padding: 0.5rem 1rem;
-    background: var(--bg-1);
+    background: var(--bg-2);
   }
 </style>
