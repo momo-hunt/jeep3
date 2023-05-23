@@ -7,6 +7,11 @@ class DB {
     this.time = new Date().getTime().toString();
   }
 
+  rekap = async () => {
+    this.req = { ...this.req, method: "rekap" };
+    return await this.fetchData();
+  };
+
   readAll = async (opt) => {
     this.req = { ...this.req, ...opt, method: "readAll" };
     return await this.fetchData();
